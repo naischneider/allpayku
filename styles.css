@@ -1,0 +1,841 @@
+/* 1. ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #263D31;
+    background-color: #F1EDE3;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* 2. ENCABEZADO */
+
+header {
+    background-color: #F1EDE3;
+    padding: 22px 8%;
+    border-bottom: 1px solid #DED8CA;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu a {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #75866A;
+}
+
+
+/* 3. BOTONES */
+
+.boton {
+    display: inline-block;
+    background-color: #263D31;
+    color: #F1EDE3;
+    padding: 14px 28px;
+    border-radius: 3px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.boton:hover {
+    background-color: #75866A;
+    transform: translateY(-2px);
+}
+
+.boton-nav {
+    margin-top: 0;
+    padding: 11px 24px;
+    flex-shrink: 0;
+}
+
+.boton-secundario {
+    background-color: #75866A;
+}
+
+.boton-claro {
+    background-color: #F1EDE3;
+    color: #263D31;
+}
+
+.boton-claro:hover {
+    background-color: #75866A;
+    color: #F1EDE3;
+}
+
+/* Botón de la tarjeta de $12.000 */
+
+.destacado .boton {
+    background-color: #F1EDE3;
+    color: #263D31;
+}
+
+.destacado .boton:hover {
+    background-color: #75866A;
+    color: #F1EDE3;
+}
+
+
+/* 4. ETIQUETAS */
+
+.etiqueta {
+    color: #765344;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+/* 5. PORTADA */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+    padding: 85px 8%;
+    min-height: 570px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 58px;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    margin-bottom: 28px;
+}
+
+.hero-texto h1 span {
+    color: #75866A;
+    font-style: italic;
+}
+
+.hero-texto p {
+    max-width: 440px;
+    color: #64685E;
+    font-size: 15px;
+}
+
+.hero-imagen {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center 45%;
+}
+
+
+/* 6. SECCIONES GENERALES */
+
+.seccion {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+
+/* 7. PRESENTACIÓN DEL PRODUCTO */
+
+.producto {
+    background-color: #E5DDCE;
+}
+
+.producto>p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #64685E;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 65px;
+}
+
+.beneficios div {
+    max-width: 220px;
+    border-top: 1px solid #B8AA95;
+    padding-top: 20px;
+}
+
+.beneficios h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.beneficios p {
+    color: #64685E;
+    font-size: 14px;
+}
+
+
+/* 8. VARIEDADES */
+
+.introduccion {
+    color: #64685E;
+    margin-bottom: 45px;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.tarjeta {
+    background-color: #FAF8F2;
+    padding: 28px;
+    width: 235px;
+    border: 1px solid #E4DED2;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(38, 61, 49, 0.08);
+}
+
+.color-variedad {
+    height: 5px;
+    margin-bottom: 25px;
+}
+
+.verde {
+    background-color: #75866A;
+}
+
+.terracota {
+    background-color: #B66C55;
+}
+
+.violeta {
+    background-color: #81708F;
+}
+
+.azul {
+    background-color: #668DA5;
+}
+
+.imagen-variedad {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-bottom: 22px;
+    border-radius: 4px;
+}
+
+.tarjeta h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    font-size: 13px;
+    color: #64685E;
+    min-height: 65px;
+}
+
+.enlace {
+    display: inline-block;
+    color: #526A4D;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.enlace:hover {
+    color: #263D31;
+}
+
+
+/* 9. PRECIOS */
+
+.precios {
+    background-color: #E5DDCE;
+}
+
+.precios-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.precio-card {
+    background-color: #F1EDE3;
+    padding: 40px 35px;
+    width: 290px;
+    border: 1px solid #D8CBB4;
+}
+
+.precio-card h3 {
+    font-size: 25px;
+}
+
+.precio-card.destacado {
+    background-color: #263D31;
+    color: #F1EDE3;
+}
+
+.cantidad {
+    color: #858477;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.destacado .cantidad {
+    color: #D8CBB4;
+}
+
+.precio {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 25px 0;
+}
+
+.aclaracion {
+    font-size: 12px;
+    color: #64685E;
+    margin-top: 25px;
+}
+
+
+/* 10. MODO DE USO */
+
+.uso {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    text-align: left;
+}
+
+.uso div {
+    flex: 1;
+}
+
+.uso p {
+    color: #64685E;
+    max-width: 450px;
+}
+
+.uso img {
+    width: 45%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+
+/* 11. EXPERIENCIAS */
+
+.experiencias {
+    background-color: #E5DDCE;
+}
+
+.experiencias p:not(.etiqueta) {
+    max-width: 550px;
+    margin: 0 auto 20px;
+    color: #64685E;
+}
+
+
+/* 12. LLAMADO A LA ACCIÓN */
+
+.llamado {
+    background-color: #263D31;
+    color: #F1EDE3;
+    text-align: center;
+    padding: 95px 8%;
+}
+
+.llamado h2 {
+    font-size: 46px;
+}
+
+.llamado p:not(.etiqueta) {
+    color: #D8CBB4;
+}
+
+.aviso-privacidad {
+    max-width: 650px;
+    margin: 25px auto 0;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #D8CBB4;
+}
+
+.aviso-privacidad a {
+    color: #F1EDE3;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.aviso-privacidad a:hover {
+    color: #D8CBB4;
+}
+
+
+/* 13. PIE DE PÁGINA */
+
+footer {
+    background-color: #1D3026;
+    color: #F1EDE3;
+    padding: 60px 8% 25px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.footer-contenido h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.footer-contenido p,
+.footer-contenido a {
+    color: #D8CBB4;
+    font-size: 13px;
+}
+
+.footer-contenido a:hover {
+    color: white;
+}
+
+.logo-footer {
+    margin-bottom: 18px;
+}
+
+.logo-footer img {
+    width: 130px;
+    height: auto;
+}
+
+
+/* 14. TÉRMINOS Y PRIVACIDAD */
+
+.terminos {
+    border-top: 1px solid #526A4D;
+    padding-top: 45px;
+    margin-bottom: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    align-items: start;
+}
+
+.terminos h2 {
+    grid-column: 1 / -1;
+    font-size: 30px;
+    color: #F1EDE3;
+    margin-bottom: 30px;
+}
+
+.terminos h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #D8CBB4;
+    margin: 15px 0 10px;
+}
+
+.terminos p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #C5C5B7;
+    max-width: 850px;
+    margin-bottom: 15px;
+}
+
+.terminos a {
+    color: #D8CBB4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.terminos a:hover {
+    color: #F1EDE3;
+}
+
+
+/* 15. COPYRIGHT */
+
+.copyright {
+    text-align: center;
+    font-size: 11px;
+    color: #A5A69C;
+    border-top: 1px solid #526A4D;
+    padding-top: 25px;
+}
+
+.copyright p {
+    margin-bottom: 0;
+}
+
+
+/* 16. ACCESIBILIDAD: FOCO DE TECLADO */
+
+a:focus-visible {
+    outline: 2px solid #B66C55;
+    outline-offset: 4px;
+}
+
+
+/* 17. ADAPTACIÓN PARA TABLETS Y CELULARES */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .hero {
+        gap: 35px;
+    }
+
+    .hero-texto h1 {
+        font-size: 46px;
+    }
+
+    .beneficios {
+        gap: 30px;
+    }
+
+    .uso {
+        gap: 40px;
+    }
+
+    .uso img {
+        height: 420px;
+    }
+
+}
+
+
+/* 18. ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 6%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 55px 6%;
+        gap: 35px;
+        min-height: auto;
+    }
+
+    .hero-texto h1 {
+        font-size: 42px;
+    }
+
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .hero-imagen img {
+        height: 300px;
+    }
+
+    .seccion {
+        padding: 70px 6%;
+    }
+
+    h2 {
+        font-size: 33px;
+    }
+
+    .beneficios {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .beneficios div {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .precios-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .precio-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .uso {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .uso div {
+        width: 100%;
+    }
+
+    .uso img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .llamado {
+        padding: 70px 6%;
+    }
+
+    .llamado h2 {
+        font-size: 35px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .terminos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .terminos h2 {
+        grid-column: auto;
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+
+}
+
+
+/* 19. CELULARES PEQUEÑOS */
+
+@media (max-width: 400px) {
+
+    .hero-texto h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    .menu {
+        gap: 10px 14px;
+    }
+
+    .imagen-variedad {
+        height: 190px;
+    }
+
+    .precio {
+        font-size: 36px;
+    }
+
+}
+
+/* TESTIMONIOS */
+
+.testimonios {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: #D8CBB4;
+}
+
+.testimonios h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.intro-testimonios {
+    margin-bottom: 45px;
+    color: #5d6258;
+}
+
+.testimonios .btn-secundario {
+    display: inline-block;
+    background-color: #263D31;
+    color: #F1EDE3;
+    padding: 14px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.testimonios .btn-secundario:hover {
+    background-color: #75866A;
+    color: #F1EDE3;
+    transform: translateY(-2px);
+}
+
+
+
+.grilla-testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.tarjeta-testimonio {
+    background-color: #F1EDE3;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.comillas {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #75866A;
+}
+
+.tarjeta-testimonio p {
+    font-size: 1rem;
+    margin: 15px 0 25px;
+    color: #263D31;
+}
+
+.usuario-testimonio {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #75866A;
+}
+
+@media (max-width: 768px) {
+    .grilla-testimonios {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonios h2 {
+        font-size: 2rem;
+    }
+}
